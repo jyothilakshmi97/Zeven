@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html style="height: 807px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Arabian</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amita">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Astloch">
+    <link rel="stylesheet" href="assets/css/styles.css">
+          
+    <script language=javascript>
+
+    function calculate()
+    {
+
+        QtyA = 0;  QtyB = 0;  QtyC = 0; QtyD = 0;  QtyE = 0;  QtyF = 0; QtyG = 0;
+        TotA = 0;  TotB = 0;  TotC = 0; TotD = 0;  TotE = 0;  TotF = 0; TotG = 0;
+
+    
+        PrcA = 125.00; PrcB = 190.0; PrcC = 130.0; PrcD = 235.0; PrcE = 120.0; PrcF = 95.0; PrcG = 80.0;
+
+
+ 
+ 
+        if (document.arabian.mixgrill.value > "")
+        { QtyA = document.arabian.mixgrill.value };
+        document.arabian.mixgrill.value = eval(QtyA);  
+ 
+        if (document.arabian.shawarma.value > "")
+        { QtyB = document.arabian.shawarma.value };
+        document.arabian.shawarma.value = eval(QtyB);  
+ 
+        if (document.arabian.kebab.value > "")
+        { QtyC = document.arabian.kebab.value };
+        document.arabian.kebab.value = eval(QtyC);
+
+        if (document.arabian.barbchick.value > "")
+        { QtyD = document.arabian.barbchick.value };
+        document.arabian.barbchick.value = eval(QtyD);
+
+        if (document.arabian.chmajboos.value > "")
+        { QtyE = document.arabian.chmajboos.value };
+        document.arabian.chmajboos.value = eval(QtyE);
+
+        if (document.arabian.filafil.value > "")
+        { QtyF = document.arabian.filafil.value };
+        document.arabian.filafil.value = eval(QtyF);
+
+        if (document.arabian.qwcurry.value > "")
+        { QtyG = document.arabian.qwcurry.value };
+        document.arabian.qwcurry.value = eval(QtyG);
+        
+ 
+        TotA = QtyA * PrcA;
+        document.arabian.cmixgrill.value = (eval(TotA));
+
+ 
+        TotB = QtyB * PrcB;
+        document.arabian.cshawarma.value = (eval(TotB));
+ 
+        TotC = QtyC * PrcC;
+        document.arabian.ckebab.value = (eval(TotC));
+
+        TotD = QtyD * PrcD;
+        document.arabian.cbarbchick.value = (eval(TotD));
+ 
+        TotE = QtyE * PrcE;
+        document.arabian.cchmajboos.value = (eval(TotE));
+ 
+        TotF = QtyF * PrcF;
+        document.arabian.cfilafil.value = (eval(TotF));
+
+        TotG = QtyG * PrcG;
+        document.arabian.cqwcurry.value = (eval(TotG));
+ 
+        Totamt = 
+        eval(TotA) +
+        eval(TotB) +
+        eval(TotC) +
+        eval(TotD) +
+        eval(TotE) +
+        eval(TotF) +
+        eval(TotG) ;
+    
+        document.arabian.total.value = (eval(Totamt));
+        
+        
+        
+  
+    } 
+    </script>
+</head>
+
+<body style="opacity: 1;background-color: rgba(234,21,21,0.66);height: auto;background-image: url(&quot;assets/img/pexels-photo-461198.jpeg&quot;);width: auto;">
+    <form action="ArabianOrder" name="arabian" method="post">
+    <div style="height: 60px;">
+        <p class="text-center" style="font-family: Anton, sans-serif;font-size: 35px;color: rgb(255,255,255);width: auto;height: auto;">Arabian</p>
+    </div>
+    <div style="height: auto;width: auto;">
+        <p class="text-center" style="font-size: 20px;height: auto;font-family: Amita, cursive;color: rgb(255,255,255);width: auto;"><strong>Arab
+                cuisine is the cuisine of the Arabs, defined as the various regional cuisines spanning the Arab world,
+                from the Maghreb to the Fertile Crescent and the Arabian Peninsula. The cuisines are often centuries
+                old and reflect the culture of great trading in spices, herbs,&nbsp;and foods.</strong><br>
+            </p>
+        <p class="text-center" style="font-size: 30px;height: auto;color: rgb(255,255,255);width: auto;">
+            <strong>Book your Arabian Food now</strong>
+        </p>
+        <div class="table-responsive text-center border rounded border-danger shadow" style="width: auto;height: auto;background-color: rgba(225,18,18,0.44);filter: brightness(100%);opacity: 0.90;">
+            <table class="table">
+                <thead>
+                    <tr style="background-color: rgba(26,195,23,0.5);">
+                        <th class="text-center" style="width: 402px;font-family: Archivo, sans-serif;color: rgb(255,255,255);">Item
+                            Description</th>
+                        <th class="text-center" style="color: rgb(255,255,255);font-family: Archivo, sans-serif;">Quantity</th>
+                        <th style="color: rgb(255,255,255);font-family: Archivo, sans-serif;">Price</th>
+                        <th style="color: rgb(255,255,255);font-family: Archivo, sans-serif;">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center" style="color: rgb(255,255,255);">
+                            <div class="form-check">
+                                <input class="form-check-input" name="mixgrillcheck"    onclick="document.getElementById('mixgrill').disabled=false;" type="checkbox" id="formCheck-1" value="Mixed Grill">
+                                <label class="form-check-label" for="formCheck-1"><strong>Mixed Grill</strong><br></label>
+                            </div><br>
+                        </td>
+                        <td class="text-center" style="width: 197px;"><input class="border rounded form-control-sm"
+                                type="text" name="mixgrill" disabled="" required="" placeholder="Enter Quantity"  id="mixgrill" onchange="calculate()" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);font-size: 14px;"></td>
+                        
+                        <td class="text-center" style="color: rgb(255,255,255);"><strong>125</strong></td>
+
+                        <td class="text-center"><input class="border rounded"  type="text" name="cmixgrill"
+                                style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);font-weight: normal;"></td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="text-center" style="color: rgb(255,255,255);">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" name="shawarmacheck" value="Shawarma" onclick="document.getElementById('shawarma').disabled=false;" id="formCheck-2"><label
+                                    class="form-check-label" for="formCheck-2"><strong>Shawarma</strong><br></label></div><br>
+                        </td>
+                    
+                        <td class="text-center"><input class="border rounded form-control-sm" type="text" name="shawarma"  onchange="calculate()" id="shawarma"
+                                disabled="" placeholder="Enter Quantity" required="" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);"></td>
+                    
+                        <td class="text-center" style="color: rgb(255,255,255);"><strong>190</strong></td>
+                        <td class="text-center"><input class="border rounded border-white" type="text"  name="cshawarma"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(255,255,255);">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" name="kebabcheck" value="Kebab" onclick="document.getElementById('kebab').disabled=false;" id="formCheck-3"><label
+                                    class="form-check-label" for="formCheck-3"><strong>Kebab</strong><br></label></div><br>
+                        </td>
+                        <td><input class="border rounded form-control-sm" type="text" name="kebab" id="kebab"  onchange="calculate()" disabled=""
+                                placeholder="Enter Quantity" required="" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);"></td>
+                        <td style="color: rgb(255,255,255);"><strong>130</strong></td>
+                        <td class="text-center"><input class="border rounded border-white" type="text"  name="ckebab"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(255,255,255);">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" name="barbcheck" value="Barbeque Chicken" onclick="document.getElementById('barbchick').disabled=false;" id="formCheck-4"><label
+                                    class="form-check-label" for="formCheck-4"><strong>Barbeque Chicken</strong><br></label></div><br>
+                        </td>
+                        <td><input class="border rounded form-control-sm" type="text" name="barbchick" id="barbchick"  onchange="calculate()" disabled=""
+                                placeholder="Enter Quantity" required="" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);"></td>
+                        <td style="color: rgb(255,255,255);"><strong>235</strong></td>
+                        <td class="text-center"><input class="border rounded border-white" type="text"  name="cbarbchick"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(255,255,255);">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" name="majboocheck" value="Chicken Majboos" onclick="document.getElementById('chmajboos').disabled=false;"  id="formCheck-5"><label
+                                    class="form-check-label" for="formCheck-5"><strong>Chicken Majboos</strong><br></label></div><br>
+                        </td>
+                        <td><input class="border rounded form-control-sm" type="text" name="chmajboos" id="chmajboos"  onchange="calculate()" disabled=""
+                                placeholder="Enter Quantity" required="" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);"></td>
+                        <td style="color: rgb(255,255,255);"><strong>120</strong></td>
+                        <td class="text-center"><input class="border rounded border-white" type="text"  name="cchmajboos"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(255,255,255);">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" name="filacheck" value="Filafil" onclick="document.getElementById('filafil').disabled=false;" id="formCheck-6"><label
+                                    class="form-check-label" for="formCheck-6"><strong>Filafil</strong><br></label></div><br>
+                        </td>
+                        <td><input class="border rounded form-control-sm" type="text" name="filafil" id="filafil"  onchange="calculate()" disabled=""
+                                placeholder="Enter Quantity" required="" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);"></td>
+                        <td style="color: rgb(255,255,255);"><strong>90</strong></td>
+                        <td class="text-center"><input class="border rounded border-white" type="text"  name="cfilafil"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(255,255,255);">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value="Quboos With curry" onclick="document.getElementById('qwcurry').disabled=false;" name="qubooscheck" id="formCheck-7"><label
+                                    class="form-check-label" for="formCheck-7"><strong>Quboos with curry</strong><br></label></div><br>
+                        </td>
+                        <td><input class="border rounded form-control-sm" type="text" name="qwcurry" id="qwcurry"  onchange="calculate()" disabled=""
+                                placeholder="Enter Quantity" required="" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);"></td>
+                        <td style="color: rgb(255,255,255);"><strong>80</strong></td>
+                        <td class="text-center"><input class="border rounded border-white"  type="text" name="cqwcurry"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="height: auto;width: auto;">
+        <div class="table-responsive table-borderless" style="width: 676px;height: auto;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 435px;font-size: 18px;color: rgb(255,255,255);">Total</th>
+                        <th><input class="border rounded border-white" type="text" name="total"  style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr></tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="height: auto;width: auto;">
+        <div class="table-responsive table-borderless text-center" style="width: 526px;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th><button class="btn btn-primary text-center border rounded border-danger shadow" type="submit"
+                                name="next" style="background-color: rgb(255,0,0);">Next</button></th>
+                        <th><button class="btn btn-primary text-center border rounded border-danger shadow" type="reset"
+                                style="background-color: rgb(255,0,0);">Reset</button></th>
+                        <th class="shadow-none"><button class="btn btn-primary text-center border rounded border-danger shadow"
+                                type="button" onclick="location.href='CuisineSelect.html';" style="background-color: rgb(255,0,0);">Previous</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr></tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    </form>
+    
+</body>
+
+</html>

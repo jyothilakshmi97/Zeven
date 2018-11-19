@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html style="height: 807px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>indian</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amita">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Astloch">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <script language=javascript>
+          
+          
+        function calculate()
+       {
+    
+         QtyA = 0;  QtyB = 0;  QtyC = 0; QtyD = 0;  QtyE = 0;  QtyF = 0; QtyG = 0;
+       TotA = 0;  TotB = 0;  TotC = 0; TotD = 0;  TotE = 0;  TotF = 0; TotG = 0;
+    
+        
+        PrcA = 125.00; PrcB = 190.0; PrcC = 130.0; PrcD = 235.0; PrcE = 120.0; PrcF = 95.0; PrcG = 80.0;
+    
+    
+     
+     
+        if (document.indian.q1.value > "")
+           { QtyA = document.indian.q1.value };
+        document.indian.q1.value = eval(QtyA);  
+     
+        if (document.indian.q2.value > "")
+         { QtyB = document.indian.q2.value };
+        document.indian.q2.value = eval(QtyB);  
+     
+        if (document.indian.q3.value > "")
+         { QtyC = document.indian.q3.value };
+        document.indian.q3.value = eval(QtyC);
+    
+        if (document.indian.q4.value > "")
+         { QtyD = document.indian.q4.value };
+        document.indian.q4.value = eval(QtyD);
+    
+        if (document.indian.q5.value > "")
+            { QtyE = document.indian.q5.value };
+        document.indian.q5.value = eval(QtyE);
+    
+        if (document.indian.q6.value > "")
+         { QtyF = document.indian.q6.value };
+        document.indian.q6.value = eval(QtyF);
+    
+        if (document.indian.q7.value > "")
+         { QtyG = document.indian.q7.value };
+         document.indian.q7.value = eval(QtyG);
+     
+     
+        TotA = QtyA * PrcA;
+        document.indian.t1.value = (eval(TotA));
+    
+     
+         TotB = QtyB * PrcB;
+         document.indian.t2.value = (eval(TotB));
+     
+      TotC = QtyC * PrcC;
+      document.indian.t3.value = (eval(TotC));
+    
+      TotD = QtyD * PrcD;
+      document.indian.t4.value = (eval(TotD));
+     
+      TotE = QtyE * PrcE;
+      document.indian.t5.value = (eval(TotE));
+     
+      TotF = QtyF * PrcF;
+      document.indian.t6.value = (eval(TotF));
+    
+      TotG = QtyG * PrcG;
+      document.indian.t7.value = (eval(TotG));
+     
+      Totamt = 
+         eval(TotA) +
+         eval(TotB) +
+         eval(TotC) +
+         eval(TotD) +
+         eval(TotE) +
+         eval(TotF) +
+         eval(TotG) ;
+        
+      document.indian.total.value = (eval(Totamt));
+            
+            
+            
+      
+    } 
+    </script>
+</head>
+
+<body style="opacity: 1;background-color: rgba(234,21,21,0.66);height: auto;background-image: url(&quot;assets/img/thumb-1920-862638.jpg&quot;);width: auto;">
+   <form action="IndianOrder" name="indian" method="POST">
+    <div style="height: 60px;">
+        <p class="text-center" style="font-family: Anton, sans-serif;font-size: 40px;color: rgb(255,255,255);width: auto;height: auto;"><strong>Indian</strong></p>
+    </div>
+    <div class="text-center" style="height: auto;width: auto;">
+        <p class="text-center" style="font-size: 20px;height: auto;font-family: Amita, cursive;color: rgb(255,255,255);width: auto;"><strong>Indian
+                cuisine is distinguished by its sophisticated use of spices and herbs and the influence of the
+                longstanding and widespread practice of vegetarianismin Indian society.Food is an integral part of
+                India's culture, with cuisines differing according to community, region, and state. Indian cuisine is
+                characterized&nbsp;by a great variety of foods, spices, and cooking techniques.Furthermore, each
+                religion, region, and caste has left its own influence on Indian food.</strong><br></p>
+        <p class="text-center" style="font-size: 30px;height: auto;color: rgb(255,255,255);width: auto;"><strong>Book
+                your Indian Food now</strong></p>
+        <div class="table-responsive text-center border rounded border-danger shadow" style="width: auto;height: auto;background-color: #e11212;filter: brightness(100%);opacity: 0.90;">
+            <table class="table">
+                <thead>
+                    <tr style="background-color: rgba(4,255,0,0.54);">
+                        <th class="text-center" style="width: 402px;font-family: Archivo, sans-serif;color: rgb(255,255,255);">Item
+                            Description</th>
+                        <th class="text-center" style="color: rgb(255,255,255);font-family: Archivo, sans-serif;">Quantity</th>
+                        <th style="color: rgb(255,255,255);font-family: Archivo, sans-serif;">Price</th>
+                        <th style="color: rgb(255,255,255);font-family: Archivo, sans-serif;">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center" style="color: rgb(255,255,255);">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value="Chicken Biriyani" onclick="document.getElementById('q1').disabled=false;" name="chicbcheck" id="formCheck-1"><label
+                                    class="form-check-label" for="formCheck-1"><strong>Chicken Biriyani</strong><br></label></div><br>
+                        </td>
+                        <td class="text-center" style="width: 197px;"><input class="border rounded form-control-sm"
+                                type="text" name="q1" id="q1" required="" onchange="calculate()" disabled="" placeholder="Enter Quantity" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);font-size: 14px;"></td>
+                        <td class="text-center" style="color: rgb(255,255,255);"><strong>125</strong></td>
+                        <td class="text-center"><input class="border rounded border-white" type="text" name="t1" id="t1"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" style="color: rgb(255,255,255);">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" onclick="document.getElementById('q2').disabled=false;" value="Meals" name="mealscheck" id="formCheck-2"><label
+                                    class="form-check-label" for="formCheck-2"><strong>Meals</strong><br></label></div><br>
+                        </td>
+                        <td class="text-center"><input class="border rounded form-control-sm" type="text" name="q2" id="q2"
+                                disabled="" placeholder="Enter Quantity" required="" onchange="calculate()" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);"></td>
+                        <td class="text-center" style="color: rgb(255,255,255);"><strong>190</strong></td>
+                        <td class="text-center"><input class="border rounded border-white" type="text" name="t2" id="t2"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(255,255,255);">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" onclick="document.getElementById('q3').disabled=false;" value="Vegetable Kofta" name="vegkcheck" id="formCheck-3"><label
+                                    class="form-check-label" for="formCheck-3"><strong>Vegetable Kofta</strong><br></label></div><br>
+                        </td>
+                        <td><input class="border rounded form-control-sm" type="text" name="q3" disabled="" id="q3"
+                                placeholder="Enter Quantity" required="" onchange="calculate()" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);"></td>
+                        <td style="color: rgb(255,255,255);"><strong>130</strong></td>
+                        <td class="text-center"><input class="border rounded border-white" type="text" name="t3" id="t3"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(255,255,255);">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" onclick="document.getElementById('q4').disabled=false;" value="Butter Chicken" name="butccheck" id="formCheck-4"><label
+                                    class="form-check-label" for="formCheck-4"><strong>Butter Chicken</strong><br></label></div><br>
+                        </td>
+                        <td><input class="border rounded form-control-sm" type="text" name="q4" id="q4" disabled=""
+                                placeholder="Enter Quantity" required="" onchange="calculate()" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);"></td>
+                        <td style="color: rgb(255,255,255);"><strong>235</strong></td>
+                        <td class="text-center"><input class="border rounded border-white" type="text" name="t4" id="t4"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(255,255,255);">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" onclick="document.getElementById('q5').disabled=false;" value="BreadBasket" name="breadcheck" id="formCheck-5"><label
+                                    class="form-check-label" for="formCheck-5"><strong>BreadBasket</strong><br></label></div><br>
+                        </td>
+                        <td><input class="border rounded form-control-sm" type="text" name="q5" id="q5" disabled=""
+                                placeholder="Enter Quantity" required="" onchange="calculate()" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);"></td>
+                        <td style="color: rgb(255,255,255);"><strong>120</strong></td>
+                        <td class="text-center"><input class="border rounded border-white" type="text" name="t5" id="t5"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(255,255,255);">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" onclick="document.getElementById('q6').disabled=false;" value="Kadai Paneer" name="kadaicheck" id="formCheck-6"><label
+                                    class="form-check-label" for="formCheck-6"><strong>Kadai Paneer</strong><br></label></div><br>
+                        </td>
+                        <td><input class="border rounded form-control-sm" type="text" name="q6" id="q6" disabled=""
+                                placeholder="Enter Quantity" required="" onchange="calculate()" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);"></td>
+                        <td style="color: rgb(255,255,255);"><strong>90</strong></td>
+                        <td class="text-center"><input class="border rounded border-white" type="text" name="t6" id="t6"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(255,255,255);"><br>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" onclick="document.getElementById('q7').disabled=false;" value="Fish Curry Meals" name="fishcheck" id="formCheck-7"><label
+                                    class="form-check-label" for="formCheck-7"><strong>Fish Curry Meals</strong><br></label></div>
+                        </td>
+                        <td><input class="border rounded form-control-sm" type="text" name="q7" id="q7" disabled=""
+                                placeholder="Enter Quantity" required="" onchange="calculate()" style="background-color: rgba(255,255,255,0);font-family: Archivo, sans-serif;color: rgb(255,255,255);"></td>
+                        <td style="color: rgb(255,255,255);"><strong>80</strong></td>
+                        <td class="text-center"><input class="border rounded border-white" type="text" name="t7" id="t7"
+                                 style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);"></td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="height: auto;width: auto;">
+        <div class="table-responsive table-borderless" style="width: 676px;height: auto;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 435px;font-size: 21px;color: rgb(255,255,255);">Total</th>
+                        <th><input class="border rounded border-white" type="text" name="total"  style="background-color: rgba(255,255,255,0);color: rgb(255,255,255);font-size: 20px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr></tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="height: auto;width: auto;">
+        <div class="table-responsive table-borderless text-center" style="width: 526px;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th><button class="btn btn-primary text-center border rounded border-danger shadow" type="submit"
+                                style="background-color: rgb(255,0,0);">Next</button></th>
+                        <th><button class="btn btn-primary text-center border rounded border-danger shadow" type="reset"
+                                style="background-color: rgb(255,0,0);">Reset</button></th>
+                        <th class="shadow-none"><button class="btn btn-primary text-center border rounded border-danger shadow"
+                                type="button" onclick="location.href='CuisineSelect.html';" style="background-color: rgb(255,0,0);">Previous</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr></tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</form>
+</body>
+
+</html>
