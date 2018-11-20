@@ -58,6 +58,7 @@ public class customerorder extends HttpServlet {
                     out.println("<th>Item 5</th>");
                     out.println("<th>Item 6</th>");
                     out.println("<th>Item 7</th>");
+                    out.println("<th>Total</th>");
                     out.println("<th>Name</th>");
                     out.println("<th>Email</th>");
                     out.println("<th>Address</th>");
@@ -74,7 +75,7 @@ public class customerorder extends HttpServlet {
                     Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/zeven","root","");
                
                
-                     //PreparedStatement ps=con.prepareStatement("select username,password from userdetails where username=? and password=?");
+                     
                      PreparedStatement ps=con.prepareStatement("select*from orders");
                     
                      ResultSet rs=ps.executeQuery();
@@ -86,7 +87,7 @@ public class customerorder extends HttpServlet {
                         out.println("<tr>");  
                             out.println("<td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td>"
                                     + "<td>"+rs.getString(5)+"</td><td>"+rs.getString(6)+"</td><td>"+rs.getString(7)+"</td>"
-                                            + "<td>"+rs.getString(8)+"</td><td>"+rs.getString(9)+"</td><td>"+rs.getString(10)+"</td><td>"+rs.getString(11)+"</td>");
+                                            + "<td>"+rs.getString(8)+"</td><td>"+rs.getString(9)+"</td><td>"+rs.getString(10)+"</td><td>"+rs.getString(11)+"</td><td>"+rs.getString(12)+"</td>");
                         }
                         out.println("</tr>");
                     }
@@ -101,7 +102,7 @@ public class customerorder extends HttpServlet {
                     
                     
                     return;
-                }catch(Exception e){out.println(e);}  
+                }catch(Exception e){out.println(e);} 
         }
     }
 

@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ *
+ * @author KHSCI5MCA16089
+ */
 public class CheckCuisine extends HttpServlet {
 
     /**

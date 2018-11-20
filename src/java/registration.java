@@ -19,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author PraveenPi
- */
+ * @author KHSCI5MCA16089
+ */ 
 @WebServlet(urlPatterns = {"/registration"})
 public class registration extends HttpServlet {
 

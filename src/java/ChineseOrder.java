@@ -13,6 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/**
+ *
+ * @author KHSCI5MCA16089
+ */
 @WebServlet(urlPatterns = {"/ChineseOrder"})
 public class ChineseOrder extends HttpServlet {
 

@@ -16,7 +16,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
+/**
+ *
+ * @author KHSCI5MCA16089
+ */
 @WebServlet(urlPatterns = {"/checkservlet"})
 public class checkservlet extends HttpServlet {
 
@@ -71,7 +74,7 @@ public class checkservlet extends HttpServlet {
                 String fitem5= item5+" "+qty5+" "+tot5;
                 String fitem6= item6+" "+qty6+" "+tot6;
                 String fitem7= item7+" "+qty7+" "+tot7;
-             
+                String Total = ""+ total;
                 String name=request.getParameter("name");
                 String email=request.getParameter("email");
                 String address=request.getParameter("address");
@@ -91,10 +94,11 @@ public class checkservlet extends HttpServlet {
                             ps.setString(5,fitem5);
                             ps.setString(6,fitem6);
                             ps.setString(7,fitem7);
-                            ps.setString(8,name);
-                            ps.setString(9,email);
-                            ps.setString(10,address);
-                            ps.setString(11,phone);
+                            ps.setString(8,Total);
+                            ps.setString(9,name);
+                            ps.setString(10,email);
+                            ps.setString(11,address);
+                            ps.setString(12,phone);
                             
                             ps.executeUpdate();
                     
@@ -102,7 +106,7 @@ public class checkservlet extends HttpServlet {
                             
                             
                             
-                            response.sendRedirect("CuisineSelect.html");
+                            response.sendRedirect("success.html");
               }catch(Exception e){out.println(e);}
                 
                 
