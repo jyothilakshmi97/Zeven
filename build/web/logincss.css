@@ -1,0 +1,35 @@
+h1 {
+    color: blue;
+    font-family:  Helvetica;
+    text-align: center;    
+}
+
+body{
+    background-color: darkgray;
+}
+
+#lognow{
+    margin: 1vh;
+    
+    font-family: 'Unica One', cursive;
+}
+
+.logincontainer{
+    align-content: center;
+    background-color: crimson;
+    width: 20vw;
+    height: 40vh;
+    text-align: center;
+}
+
+
+
+
+input[type=text], input[type=password] {
+    width: 10vw;
+    padding: 2px 12px;
+    margin: 2vh 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}

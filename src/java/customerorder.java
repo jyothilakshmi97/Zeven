@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author KHSCI5MCA16089
+ * @author PraveenPi
  */
 @WebServlet(urlPatterns = {"/customerorder"})
 public class customerorder extends HttpServlet {
@@ -37,7 +37,6 @@ public class customerorder extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
             out.println("<head>");
             out.println("<meta charset='utf-8'>");
             out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>");
@@ -72,10 +71,10 @@ public class customerorder extends HttpServlet {
               try{
                
                     Class.forName("com.mysql.jdbc.Driver");
-                    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/zeven","root","");
+                    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/zeven","root","123");
                
                
-                     
+                     //PreparedStatement ps=con.prepareStatement("select username,password from userdetails where username=? and password=?");
                      PreparedStatement ps=con.prepareStatement("select*from orders");
                     
                      ResultSet rs=ps.executeQuery();

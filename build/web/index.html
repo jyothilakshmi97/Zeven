@@ -10,16 +10,15 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
-    <div class="login-clean">
-        <form class="border rounded" method="post" action="LoginOrRegister">
+<body style="height: auto;">
+    <div class="login-clean" style="height: 130vh;">
+        <form class="border rounded" action="LoginOrRegister" method="post">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><img class="img-fluid" src="assets/img/1541816211201.png" width="200"></div>
             <div class="form-group"><input class="border rounded border-danger form-control" type="text" name="username" required="" placeholder="Username"></div>
             <div class="form-group"><input class="border rounded border-danger form-control" type="password" name="password" required="" placeholder="Password"></div>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit" name="login" style="background-color: #f90034;">Log In</button></div>
-            <button class="btn btn-primary btn-block" type="button" name="register" onclick="location.href='register.html';" style="background-color: #f90034;">Register</button>
-        </form>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit"  name="login" style="background-color: #f90034;">Log In</button></div>
+            <button class="btn btn-primary btn-block" type="button" onclick="location.href='register.html';" name=register style="background-color: #f90034;">Register</button></form>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

@@ -19,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author KHSCI5MCA16089
- */ 
+ * @author PraveenPi
+ */
 @WebServlet(urlPatterns = {"/registration"})
 public class registration extends HttpServlet {
 
@@ -54,7 +54,7 @@ public class registration extends HttpServlet {
                         try{
                     
                             Class.forName("com.mysql.jdbc.Driver");
-                            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/zeven","root","");
+                            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/zeven","root","123");
                 
                 
                             PreparedStatement ps=con.prepareStatement("insert into userdetails values(?,?,?,?,?,?)");

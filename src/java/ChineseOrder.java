@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author KHSCI5MCA16089
+ * @author PraveenPi
  */
 @WebServlet(urlPatterns = {"/ChineseOrder"})
 public class ChineseOrder extends HttpServlet {

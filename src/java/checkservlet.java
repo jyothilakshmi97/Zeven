@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -18,7 +17,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author KHSCI5MCA16089
+ * @author PraveenPi
  */
 @WebServlet(urlPatterns = {"/checkservlet"})
 public class checkservlet extends HttpServlet {
@@ -39,8 +38,7 @@ public class checkservlet extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
           
             
-            
-            HttpSession session=request.getSession(false);  
+           HttpSession session=request.getSession(false);  
 
                  
                 String item1=(String)session.getAttribute("Item1");
@@ -82,10 +80,10 @@ public class checkservlet extends HttpServlet {
               
               try{
                     Class.forName("com.mysql.jdbc.Driver");
-                            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/zeven","root","");
+                            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/zeven","root","123");
                 
                 
-                            PreparedStatement ps=con.prepareStatement("insert into orders values(?,?,?,?,?,?,?,?,?,?,?)");
+                            PreparedStatement ps=con.prepareStatement("insert into orders values(?,?,?,?,?,?,?,?,?,?,?,?)");
                      
                             ps.setString(1,fitem1);
                             ps.setString(2,fitem2);
@@ -108,8 +106,6 @@ public class checkservlet extends HttpServlet {
                             
                             response.sendRedirect("success.html");
               }catch(Exception e){out.println(e);}
-                
-                
                 
         }
     }

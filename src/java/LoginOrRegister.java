@@ -15,10 +15,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 /**
  *
- * @author KHSCI5MCA16089
+ * @author PraveenPi
  */
 public class LoginOrRegister extends HttpServlet {
 
@@ -43,21 +42,20 @@ public class LoginOrRegister extends HttpServlet {
             
           
             
-            if(request.getParameter("login")!=null){
                 try{
                
                     Class.forName("com.mysql.jdbc.Driver");
-                    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/zeven","root","");
+                    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/zeven","root","123");
                
                
-                     PreparedStatement ps=con.prepareStatement("select uname,pass from userdetails where uname=? and pass=?");
+                     PreparedStatement ps=con.prepareStatement("select username,password from userdetails where username=? and password=?");
                      //PreparedStatement ps=con.prepareStatement("select*from userdetails where username=?");
                      ps.setString(1,username);
                      ps.setString(2,password);
                      ResultSet rs=ps.executeQuery();
                
                     while(rs.next()){
-                        if((rs.getString("uname").equals("admin"))&& rs.getString("pass").equals("pass123")){
+                        if((rs.getString("username").equals("admin"))&& rs.getString("password").equals("pass123")){
                           response.sendRedirect("admin.html");
                             return;   
                     }
@@ -73,12 +71,9 @@ public class LoginOrRegister extends HttpServlet {
                     
                     return;
                 }catch(Exception e){out.println(e);}           
-            }
+            
            
-            else if(request.getParameter("register")!=null){
-                response.sendRedirect("register.html");
-                   
-                   }
+            
         }
     }
 
